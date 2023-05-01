@@ -13,8 +13,13 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace("/");
+      console.log("logged in");
     } else {
       alert(response.statusText);
     }
   }
 };
+
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
