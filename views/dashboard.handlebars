@@ -1,0 +1,22 @@
+<h2>Your Dashboard</h2>
+{{#each posts as |post|}}
+  <h3>{{post.title}}</h3>
+  <p>{{post.content}}</p>
+{{/each}}
+<div class="forms">
+  <form id="post-form">
+    <h3>Create New Post</h3>
+    <h4>Title</h4>
+    <input id="post-title" type="text" />
+    <h4>Content</h4>
+    <input id="post-content" type="text" />
+    <br />
+    <button id="submit-post">Post</button>
+
+  </form>
+</div>
+<div>
+  <button id="new-post">New Post</button>
+</div>
+
+<script src="/js/newPost.js"></script>
