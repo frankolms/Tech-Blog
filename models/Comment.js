@@ -36,3 +36,5 @@ Comment.init(
     modelName: "post",
   }
 );
+
+model.exports = Comment;

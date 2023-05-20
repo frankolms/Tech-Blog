@@ -12,8 +12,8 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
       console.log("logged in");
+      document.location.replace("/");
     } else {
       alert(response.statusText);
     }
@@ -21,5 +21,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".login-form")
-  .addEventListener("submit", loginFormHandler);
+  .getElementById("login-btn")
+  .addEventListener("click", loginFormHandler);
