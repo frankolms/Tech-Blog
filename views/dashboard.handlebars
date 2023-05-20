@@ -1,9 +1,10 @@
 <h2>Your Dashboard</h2>
 {{#each posts as |post|}}
   <h3>
-    {{post.title}}
-    -
-    {{format_date post.date_created}}
+    <a href="/posts/{{post.id}}">{{post.title}}
+      -
+      {{format_date post.date_created}}
+    </a>
   </h3>
 {{/each}}
 <div class="forms">
