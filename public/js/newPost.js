@@ -18,4 +18,16 @@ const createPost = async (event) => {
   }
 };
 
+const showPostForm = (event) => {
+  event.preventDefault();
+  const newPostBtn = document.getElementById("new-post");
+  const postForm = document.getElementById("post-form");
+  if (postForm.classList.contains("hidden")) {
+    postForm.classList.remove("hidden");
+    newPostBtn.classList.add("hidden");
+  }
+};
+
 document.getElementById("submit-post").addEventListener("click", createPost);
+
+document.getElementById("new-post").addEventListener("click", showPostForm);
