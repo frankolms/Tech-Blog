@@ -1,7 +1,7 @@
 <h2>Your Dashboard</h2>
 {{#each posts as |post|}}
   <h3>
-    <a href="/posts/{{post.id}}">{{post.title}}
+    <a href="/post/{{post.id}}">{{post.title}}
       -
       {{format_date post.date_created}}
     </a>

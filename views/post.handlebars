@@ -1,1 +1,17 @@
-<h2>{{selectedPost.title}}</h2>
+<h2 class="post-title">{{selectedPost.title}}
+  -
+  {{format_date selectedPost.date_created}}</h2>
+<p class="post-content">{{selectedPost.content}}</p>
+<button class="show-update-form">Update Post</button>
+
+<form class="hidden update-form">
+  <h2>Edit Post</h2>
+  <h3>Title</h3>
+  <input type="text" class="updated-title" />
+  <h3>Content</h3>
+  <input type="text" class="updated-content" />
+  <br />
+  <button class="update-post" value="{{selectedPost.id}}">Update</button>
+</form>
+
+<script src="/js/editPost.js"></script>
