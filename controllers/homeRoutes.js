@@ -4,7 +4,21 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    const postData = await Post.findAll({});
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ["name"],
+          },
+        },
+      ],
+    });
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
@@ -24,6 +38,13 @@ router.get("/post/:id", withAuth, async (req, res) => {
         {
           model: User,
           attributes: ["name"],
+        },
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ["name"],
+          },
         },
       ],
     });

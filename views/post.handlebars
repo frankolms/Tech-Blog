@@ -2,6 +2,8 @@
   -
   {{format_date selectedPost.date_created}}</h2>
 <p class="post-content">{{selectedPost.content}}</p>
+<h2>Comments</h2>
+{{#each }}
 <button class="show-update-form">Update Post</button>
 <br />
 <button class="delete-post" data-id="{{selectedPost.id}}">Delete Post</button>

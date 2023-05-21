@@ -20,6 +20,13 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    post_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "post",
+        key: "id",
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -33,8 +40,8 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "post",
+    modelName: "comment",
   }
 );
 
-model.exports = Comment;
+module.exports = Comment;
