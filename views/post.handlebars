@@ -1,14 +1,22 @@
 <h2 class="post-title">{{selectedPost.title}}
   -
+  {{selectedPost.user.name}}
+  -
   {{format_date selectedPost.date_created}}</h2>
 <p class="post-content">{{selectedPost.content}}</p>
-<h2>Comments</h2>
-{{#each selectedPost.comments as |comment|}}
-  <h5>{{comment.content}}</h5>
-{{/each}}
 <button class="show-update-form">Update Post</button>
 <br />
 <button class="delete-post" data-id="{{selectedPost.id}}">Delete Post</button>
+<h2>Comments</h2>
+{{#each selectedPost.comments as |comment|}}
+  <h4>{{comment.user.name}} - {{format_date comment.date_created}}</h4>
+  <h5>{{comment.content}}</h5>
+{{/each}}
+<form class="comment-form">
+  <h2>Leave a Comment</h2>
+  <input type="text" class="comment" />
+  <button class="post-btn" value="{{selectedPost.id}}">Post</button>
+</form>
 
 <form class="hidden update-form">
   <h2>Edit Post</h2>
@@ -22,3 +30,4 @@
 </form>
 
 <script src="/js/editPost.js"></script>
+<script src="/js/comment.js"></script>
