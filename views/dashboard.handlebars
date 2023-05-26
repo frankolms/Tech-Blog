@@ -1,23 +1,29 @@
-<h2>Your Dashboard</h2>
+<div class="dashboard-header">
+  <h2 class="your-dasbhoard">Your Dashboard</h2>
+</div>
 {{#each posts as |post|}}
-  <h3>
-    <a href="/post/{{post.id}}">{{post.title}}
-      -
-      {{format_date post.date_created}}
-    </a>
-  </h3>
+  <div class="dashboard-post">
+    <h3>
+      <a href="/post/{{post.id}}">{{post.title}}
+        -
+        {{format_date post.date_created}}
+      </a>
+    </h3>
+  </div>
 {{/each}}
-<div class="forms">
-  <form id="post-form" class="hidden">
-    <h3>Create New Post</h3>
-    <h4>Title</h4>
-    <input id="post-title" type="text" />
-    <h4>Content</h4>
-    <input id="post-content" type="text" />
-    <br />
-    <button id="submit-post">Post</button>
+<div class="forms new-post-form">
+  <div class="new-post-wrapper">
+    <form id="post-form" class="hidden">
+      <h3>Create New Post</h3>
+      <h4>Title</h4>
+      <input id="post-title" type="text" />
+      <h4>Content</h4>
+      <input id="post-content" type="text" />
+      <br />
+      <button id="submit-post">Post</button>
 
-  </form>
+    </form>
+  </div>
 </div>
 <div>
   <button id="new-post">New Post</button>
