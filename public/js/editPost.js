@@ -6,11 +6,13 @@ const updatePostForm = (event) => {
   const showUpdateFormBtn = document.querySelector(".show-update-form");
   const updatedTitle = document.querySelector(".updated-title");
   const updatedContent = document.querySelector(".updated-content");
+  const commentsSection = document.querySelector(".comment-form");
   if (updateForm.classList.contains("hidden")) {
     updateForm.classList.remove("hidden");
-    postTitle.classList.add("hidden");
-    postContent.classList.add("hidden");
+    // postTitle.classList.add("hidden");
+    // postContent.classList.add("hidden");
     showUpdateFormBtn.classList.add("hidden");
+    commentsSection.classList.add("hidden");
     updatedTitle.value = postTitle.innerHTML;
     updatedContent.value = postContent.innerHTML;
   }
