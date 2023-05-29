@@ -82,6 +82,11 @@ nav {
   padding: 10px;
 }
 
+.horizontal-rule {
+  border: 1px solid black;
+  width: 100%;
+}
+
 .new-comment-wrapper {
   display: flex;
 }

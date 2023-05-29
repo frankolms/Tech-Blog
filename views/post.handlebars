@@ -18,6 +18,7 @@
       {{#each selectedPost.comments as |comment|}}
         <h4>{{comment.user.name}} - {{format_date comment.date_created}}</h4>
         <h5>{{comment.content}}</h5>
+        <hr class="horizontal-rule" />
       {{/each}}
     </div>
   </div>
