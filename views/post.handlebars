@@ -26,22 +26,26 @@
   <div class="new-comment-wrapper">
     <form class="comment-form">
       <h2>Leave a Comment</h2>
-      <input type="text" class="comment" />
+      <textarea type="text" class="comment"></textarea>
       <br />
       <button class="post-btn" value="{{selectedPost.id}}">Post</button>
     </form>
   </div>
 </div>
-<form class="hidden update-form">
-  <h2>Edit Post</h2>
-  <h3>Title</h3>
-  <input type="text" class="updated-title" />
-  <h3>Content</h3>
-  <input type="text" class="updated-content" />
-  <br />
-  <button class="update-post" value="{{selectedPost.id}}">Update</button>
+<div class="forms update-post-form">
+  <div class="update-post-form-wrapper">
+    <form class="hidden update-form">
+      <h2>Edit Post</h2>
+      <h3>Title</h3>
+      <input type="text" class="updated-title" />
+      <h3>Content</h3>
+      <textarea type="text" class="updated-content"></textarea>
+      <br />
+      <button class="update-post" value="{{selectedPost.id}}">Update</button>
 
-</form>
+    </form>
+  </div>
+</div>
 
 <script src="/js/editPost.js"></script>
 <script src="/js/comment.js"></script>

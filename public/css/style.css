@@ -86,8 +86,30 @@ nav {
   display: flex;
 }
 
+.update-post-form-wrapper {
+  display: flex;
+}
+
+.update-form {
+  margin-left: 50px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.updated-content {
+  width: 300px;
+  height: 200px;
+}
+
+.update-post {
+  margin-top: 10px;
+}
+
 .post-title {
   background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width: 100%;
   padding-bottom: 5px;
   padding-left: 20px;
@@ -96,7 +118,7 @@ nav {
 
 .postpage-post {
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 10px 20px;
 }
 
