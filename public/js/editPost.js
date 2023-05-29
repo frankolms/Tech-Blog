@@ -9,8 +9,6 @@ const updatePostForm = (event) => {
   const commentsSection = document.querySelector(".comment-form");
   if (updateForm.classList.contains("hidden")) {
     updateForm.classList.remove("hidden");
-    // postTitle.classList.add("hidden");
-    // postContent.classList.add("hidden");
     showUpdateFormBtn.classList.add("hidden");
     commentsSection.classList.add("hidden");
     updatedTitle.value = postTitle.innerHTML;
